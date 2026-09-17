@@ -16,7 +16,6 @@ Portfólio pessoal responsivo para apresentar minha trajetória, habilidades e p
 - HTML semântico por meio de JSX
 - CSS responsivo e animações
 - JavaScript para menu, filtros e animações de entrada
-- Next.js/Vinext como estrutura de publicação
 
 ## Estrutura principal
 
@@ -27,15 +26,6 @@ app/
 └── layout.tsx     # Metadados e configuração global
 public/
 └── script.js      # Interações em JavaScript puro
-```
-
-## Como executar
-
-Requer Node.js 22.13 ou superior.
-
-```bash
-npm install
-npm run dev
 ```
 
 ## Evolução planejada
