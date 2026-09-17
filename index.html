@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Amanda Frolini, desenvolvedora Front-end e designer UX/UI.">
+  <title>Amanda Frolini | Portfólio</title>
+
+  <!-- Fonte do Google Fonts. Se quiser usar o site sem internet, remova esta linha. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cabeçalho e navegação -->
+  <header class="header" id="inicio">
+    <div class="container nav-container">
+      <a class="logo" href="#inicio" aria-label="Voltar ao início">AF.</a>
+
+      <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navigation" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a class="nav-cta" href="#contato">Vamos conversar?</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Apresentação principal -->
+    <section class="hero section">
+      <div class="hero-shape" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Olá, eu sou</p>
+          <h1>Amanda<br>Frolini<span>.</span></h1>
+          <p class="hero-text">
+            Estudante de Desenvolvimento de Software Multiplataforma, com foco em
+            <strong>Front-end, Design, UX e UI.</strong>
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#projetos">Conheça meus projetos <span>→</span></a>
+            <a class="text-link" href="#contato">Entre em contato</a>
+          </div>
+          <div class="social-links" aria-label="Redes sociais">
+            <a href="https://github.com/amandafrolini6" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <!-- Cartão decorativo de código -->
+        <div class="code-card reveal" aria-label="Exemplo de código sobre Amanda">
+          <div class="code-dots"><i></i><i></i><i></i></div>
+          <pre><code><span class="code-blue">const</span> developer = {
+  name: <span class="code-red">"Amanda"</span>,
+  focus: <span class="code-red">"Front-end"</span>,
+  skills: [<span class="code-red">"UX/UI"</span>, <span class="code-red">"Design"</span>],
+  available: <span class="code-blue">true</span>
+};</code></pre>
+          <span class="code-label">&lt;/&gt; portfolio.js</span>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#sobre">Role para descobrir ↓</a>
+    </section>
+
+    <!-- Sobre e áreas de atuação -->
+    <section class="about section" id="sobre">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 — habilidades</p>
+          <h2>O que levo para cada<br><em>projeto.</em></h2>
+          <p>Uma combinação de código, olhar visual e atenção às pessoas.</p>
+        </div>
+
+        <div class="skills-grid" id="habilidades">
+          <article class="skill-card reveal">
+            <span class="skill-icon">&lt;/&gt;</span>
+            <h3>Front-end</h3>
+            <p>Interfaces responsivas, acessíveis e agradáveis em qualquer dispositivo.</p>
+            <a href="#projetos">Conheça →</a>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-icon">◇</span>
+            <h3>UX & UI</h3>
+            <p>Fluxos intuitivos e decisões visuais que tornam a experiência mais simples.</p>
+            <a href="#projetos">Conheça →</a>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-icon">✦</span>
+            <h3>Design</h3>
+            <p>Identidades consistentes, protótipos e soluções com propósito.</p>
+            <a href="#projetos">Conheça →</a>
+          </article>
+        </div>
+
+        <div class="tech-list reveal" aria-label="Tecnologias">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
+          <span>C#</span><span>Python</span><span>SQL</span><span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos em destaque -->
+    <section class="projects section" id="projetos">
+      <div class="container">
+        <div class="projects-top reveal">
+          <div>
+            <p class="eyebrow">02 — projetos</p>
+            <h2>Ideias que ganharam<br><em>forma.</em></h2>
+          </div>
+          <div class="project-filters" aria-label="Filtrar projetos">
+            <button class="filter active" data-filter="all">Todos</button>
+            <button class="filter" data-filter="faculdade">Faculdade</button>
+            <button class="filter" data-filter="pessoal">Pessoais</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-category="faculdade">
+            <div class="project-visual visual-blue"><span>SM</span></div>
+            <div class="project-info">
+              <small>UX/UI • Desenvolvimento</small>
+              <h3>SmartProd</h3>
+              <p>Sistema de gestão e rastreabilidade de estoque com integração NFC.</p>
+              <div class="tags"><span>Figma</span><span>API</span><span>NFC</span></div>
+              <a href="#contato">Ver projeto →</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="faculdade">
+            <div class="project-visual visual-coral"><span>AH</span></div>
+            <div class="project-info">
+              <small>Mobile • Faculdade</small>
+              <h3>AppHotel</h3>
+              <p>Aplicativo acadêmico desenvolvido em .NET MAUI, C# e XAML.</p>
+              <div class="tags"><span>.NET MAUI</span><span>C#</span><span>XAML</span></div>
+              <a href="https://github.com/amandafrolini6" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="faculdade">
+            <div class="project-visual visual-purple"><span>ML</span></div>
+            <div class="project-info">
+              <small>Dados • Faculdade</small>
+              <h3>Machine Learning</h3>
+              <p>Estudos e modelos de regressão linear aplicados a dados reais.</p>
+              <div class="tags"><span>Python</span><span>Pandas</span><span>Jupyter</span></div>
+              <a href="https://github.com/amandafrolini6" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="pessoal">
+            <div class="project-visual visual-green"><span>FI</span></div>
+            <div class="project-info">
+              <small>Front-end • Pessoal</small>
+              <h3>Finance App</h3>
+              <p>Controle de receitas, despesas e saldo com dados salvos localmente.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/amandafrolini6" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formação e certificados -->
+    <section class="journey section">
+      <div class="container">
+        <div class="journey-heading reveal">
+          <p class="eyebrow">03 — jornada</p>
+          <h2>Curiosidade que vira<br><em>experiência.</em></h2>
+          <p>Cursos, eventos e experiências que fazem parte da minha jornada.</p>
+        </div>
+
+        <div class="certificates-grid">
+          <article class="certificate reveal">
+            <div class="certificate-preview preview-one">Fatec<br><strong>DSM</strong></div>
+            <h3>Desenvolvimento de Software</h3>
+            <p>Fatec Jahu</p>
+          </article>
+          <article class="certificate reveal">
+            <div class="certificate-preview preview-two">CERTIFICADO<br><strong>TECNOLOGIA</strong></div>
+            <h3>Eventos e competições</h3>
+            <p>Aprendizado na prática</p>
+          </article>
+          <article class="certificate reveal">
+            <div class="certificate-preview preview-three">&lt;FDevs/&gt;<br><strong>CERTIFICADO</strong></div>
+            <h3>Lógica de Programação</h3>
+            <p>Formação complementar</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact section" id="contato">
+      <div class="container contact-content reveal">
+        <p class="eyebrow">04 — contato</p>
+        <h2>Tem uma ideia em mente?<br><em>Vamos criar juntos.</em></h2>
+        <!-- Troque o e-mail abaixo pelo seu e-mail profissional -->
+        <a class="contact-email" href="mailto:amandafrolini@email.com">amandafrolini@email.com ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="logo footer-logo" href="#inicio">AF.</a>
+      <p>© <span id="year"></span> Amanda Frolini. Feito com HTML, CSS e JavaScript.</p>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
