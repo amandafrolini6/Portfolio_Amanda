@@ -60,5 +60,25 @@ document.querySelectorAll(".reveal").forEach((element) => {
   revealObserver.observe(element);
 });
 
+const CONTACT_EMAIL = "amandafrolini6@gmail.com";
+
+// Prepara o e-mail com os dados digitados no formulário.
+const contactForm = document.querySelector("#contact-form");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const data = new FormData(contactForm);
+  const subject = String(data.get("subject")).trim();
+  const body =
+    `Nome: ${String(data.get("name")).trim()}\n` +
+    `E-mail: ${String(data.get("email")).trim()}\n\n` +
+    `Mensagem:\n${String(data.get("message")).trim()}`;
+
+  window.location.href =
+    `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}` +
+    `&body=${encodeURIComponent(body)}`;
+});
+
 // Atualiza automaticamente o ano do rodapé.
 document.querySelector("#year").textContent = new Date().getFullYear();

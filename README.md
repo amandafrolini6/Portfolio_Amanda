@@ -1,15 +1,19 @@
 # Portfólio — Amanda Frolini
 
+<<<<<<< HEAD
 Portfólio pessoal responsivo para apresentar minha trajetória, habilidades e projetos acadêmicos e pessoais. Ainda em processo de evolução.
+=======
+Este é meu portfólio pessoal, criado para apresentar meus projetos, habilidades e certificados.
+>>>>>>> 40db1fc (modificando tela de certificados)
 
-## Seções
+> 🚧 **Em construção:** o portfólio ainda está em desenvolvimento. Estou ajustando o conteúdo, melhorando a experiência e adicionando novos projetos.
 
-- Apresentação
-- Sobre mim
-- Certificações com visualização ampliada
-- Habilidades e tecnologias
-- Projetos com filtros por categoria
-- Contato e redes profissionais
+## O que você encontra aqui
+
+- Projetos acadêmicos e pessoais
+- Habilidades e tecnologias que estou estudando
+- Cursos, eventos e certificados
+- Formas de entrar em contato comigo
 
 ## Tecnologias
 
@@ -28,6 +32,13 @@ public/
 └── script.js      # Interações em JavaScript puro
 ```
 
+<<<<<<< HEAD
+=======
+## Tecnologias utilizadas
+
+HTML, CSS e JavaScript.
+
+>>>>>>> 40db1fc (modificando tela de certificados)
 ## Evolução planejada
 
 O JavaScript está isolado em `public/script.js`, facilitando uma futura migração para TypeScript.
@@ -38,13 +49,13 @@ O JavaScript está isolado em `public/script.js`, facilitando uma futura migraç
 4. Conectar os cards a um arquivo de dados ou CMS.
 5. Adicionar páginas individuais e links reais para cada projeto.
 
-## Como adicionar novos certificados
+- Adicionar novos projetos e atualizar suas descrições
+- Melhorar detalhes de responsividade e acessibilidade
+- Revisar e completar os links de contato
 
-1. Salve a imagem em `public/certificados/`.
-2. Abra `app/page.tsx`.
-3. Acrescente um novo item no array `certificates`, informando título, instituição, data, duração e caminho da imagem.
+## Como visualizar
 
-O novo certificado aparecerá automaticamente na grade e poderá ser aberto em tamanho maior.
+Baixe ou clone o projeto e abra o arquivo `index.html` no navegador.
 
 ## Contato
 
@@ -53,3 +64,6 @@ O novo certificado aparecerá automaticamente na grade e poderá ser aberto em t
 - [E-mail](mailto:amandafrolini6@gmail.com)
 
 © 2026 Amanda Frolini
+---
+
+
