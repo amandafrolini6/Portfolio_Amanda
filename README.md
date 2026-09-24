@@ -1,11 +1,8 @@
-# Portfólio — Amanda Frolini
+# Amanda Frolini
 
-<<<<<<< HEAD
-Portfólio pessoal responsivo para apresentar minha trajetória, habilidades e projetos acadêmicos e pessoais. Ainda em processo de evolução.
+Portfólio pessoal para apresentar minha trajetória, habilidades e projetos acadêmicos e pessoais. Ainda em processo de evolução.
 =======
 Este é meu portfólio pessoal, criado para apresentar meus projetos, habilidades e certificados.
->>>>>>> 40db1fc (modificando tela de certificados)
-
 > 🚧 **Em construção:** o portfólio ainda está em desenvolvimento. Estou ajustando o conteúdo, melhorando a experiência e adicionando novos projetos.
 
 ## O que você encontra aqui
@@ -21,24 +18,7 @@ Este é meu portfólio pessoal, criado para apresentar meus projetos, habilidade
 - CSS responsivo e animações
 - JavaScript para menu, filtros e animações de entrada
 
-## Estrutura principal
 
-```text
-app/
-├── page.tsx       # Conteúdo e estrutura da página
-├── globals.css    # Design, responsividade e animações
-└── layout.tsx     # Metadados e configuração global
-public/
-└── script.js      # Interações em JavaScript puro
-```
-
-<<<<<<< HEAD
-=======
-## Tecnologias utilizadas
-
-HTML, CSS e JavaScript.
-
->>>>>>> 40db1fc (modificando tela de certificados)
 ## Evolução planejada
 
 O JavaScript está isolado em `public/script.js`, facilitando uma futura migração para TypeScript.
