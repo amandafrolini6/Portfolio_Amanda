@@ -1,6 +1,6 @@
 # Portfólio — Amanda Frolini
 
-Portfólio pessoal responsivo para apresentar minha trajetória, habilidades e projetos acadêmicos e pessoais.
+Portfólio pessoal responsivo para apresentar minha trajetória, habilidades e projetos acadêmicos e pessoais. Ainda em processo de evolução.
 
 ## Seções
 
