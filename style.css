@@ -100,19 +100,40 @@ h2 em { color: var(--blue); font-family: "Playfair Display", serif; font-weight:
 .scroll-hint { position: absolute; bottom: 28px; left: 50%; color: #99a0af; font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; transform: translateX(-50%); }
 
 /* ==================================================
-   4. HABILIDADES
+   4. TECNOLOGIAS
    ================================================== */
 .about { background: var(--blue-light); }
 .section-heading { text-align: center; }
-.section-heading > p:last-child { margin-top: 20px; color: var(--muted); }
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 60px; }
-.skill-card { padding: 38px; background: var(--white); box-shadow: 0 12px 34px rgba(38,65,110,.06); transition: .3s; }
-.skill-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
-.skill-icon { display: grid; place-items: center; width: 38px; height: 38px; margin-bottom: 30px; color: var(--blue); background: var(--blue-light); font-weight: 700; }
-.skill-card h3 { margin-bottom: 12px; font-size: 1.05rem; }
-.skill-card p { min-height: 76px; color: var(--muted); font-size: .84rem; }
-.skill-card a { display: inline-block; margin-top: 20px; color: var(--blue); font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.tech-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; margin-top: 48px; color: #949cad; font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+/* NOVO: os cards são independentes para flutuar sem mover o restante da página. */
+.tech-stage { position: relative; margin-top: 52px; padding: 18px 0; isolation: isolate; }
+.tech-trails { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.tech-trails path { fill: none; stroke: #b6d0fa; stroke-width: 1.5; stroke-dasharray: 5 9; }
+.tech-stage.visible .tech-trails path { animation: trail-flow 24s linear infinite; }
+.tech-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 82px 32px; }
+.tech-card { min-width: 0; height: 178px; transition: transform .25s ease; }
+.tech-card:hover { transform: translateY(-9px); }
+.tech-card-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; height: 100%; background: #fff; border: 1px solid #e4ecf9; border-radius: 16px; box-shadow: 0 14px 32px rgba(43,87,161,.09); color: var(--navy); font-size: .9rem; font-weight: 700; }
+.tech-stage.visible .tech-card-inner { animation: tech-float 4.4s ease-in-out infinite; animation-delay: calc(var(--i) * -.55s); }
+.tech-card:nth-child(1) { --i: 0; }.tech-card:nth-child(2) { --i: 1; }
+.tech-card:nth-child(3) { --i: 2; }.tech-card:nth-child(4) { --i: 3; }
+.tech-card:nth-child(5) { --i: 4; }.tech-card:nth-child(6) { --i: 5; }
+.tech-card:nth-child(7) { --i: 6; }.tech-card:nth-child(8) { --i: 7; }
+.tech-symbol { display: grid; place-items: center; width: 66px; height: 66px; border-radius: 12px; color: white; font-size: 2rem; font-weight: 800; line-height: 1; }
+.tech-html { background: #e65b28; }.tech-css { background: #2879d0; }
+.tech-js { background: #f4d63f; color: #252525; font-size: 1.65rem; }
+.tech-csharp { background: #773da6; font-size: 1.55rem; }
+.tech-python { background: linear-gradient(135deg,#326f9e 50%,#f6c545 50%); font-size: 1.55rem; }
+.tech-sql { background: #3788cf; }.tech-git { background: #ed6246; }
+.tech-figma { display: grid; grid-template-columns: repeat(2, 17px); grid-template-rows: repeat(3, 17px); align-content: center; justify-content: center; gap: 0; background: #f6f8fc; }
+.tech-figma i:nth-child(1) { background: #f24e1e; border-radius: 8px 0 0 0; }
+.tech-figma i:nth-child(2) { background: #ff7262; border-radius: 0 8px 8px 0; }
+.tech-figma i:nth-child(3) { background: #a259ff; border-radius: 8px 0 0 8px; }
+.tech-figma i:nth-child(4) { background: #1abcfe; border-radius: 50%; }
+.tech-figma i:nth-child(5) { background: #0acf83; border-radius: 0 0 8px 8px; }
+.tech-center { position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 76px; height: 76px; border: 1px solid #c8dcfa; border-radius: 50%; background: var(--blue-light); box-shadow: 0 0 0 13px rgba(255,255,255,.65); color: var(--blue); font-size: 1.25rem; font-weight: 700; transform: translate(-50%,-50%); pointer-events: none; }
+.tech-caption { margin-top: 24px; color: var(--muted); text-align: center; font-size: .85rem; letter-spacing: .08em; }
+@keyframes tech-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes trail-flow { to { stroke-dashoffset: -140; } }
 
 /* ==================================================
    5. PROJETOS
@@ -271,9 +292,10 @@ h2 em { color: var(--blue); font-family: "Playfair Display", serif; font-weight:
   .hero-grid { grid-template-columns: 1fr; gap: 60px; }
   .code-card { max-width: 560px; }
   .scroll-hint { display: none; }
-  .skills-grid { grid-template-columns: 1fr; }
+  .tech-grid { gap: 56px 18px; }
+  .tech-card { height: 145px; }
+  .tech-center { width: 58px; height: 58px; box-shadow: 0 0 0 8px rgba(255,255,255,.65); }
   .certificates-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .skill-card p { min-height: auto; }
   .projects-grid { grid-template-columns: 1fr; }
 }
 
@@ -286,6 +308,10 @@ h2 em { color: var(--blue); font-family: "Playfair Display", serif; font-weight:
   .project-filters { width: 100%; overflow-x: auto; }
   .project-card { grid-template-columns: 1fr; }
   .project-visual { min-height: 180px; }
+  .tech-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .tech-card { height: 132px; }
+  .tech-symbol { width: 52px; height: 52px; font-size: 1.45rem; }
+  .tech-center, .tech-trails { display: none; }
   .certificates-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .certificate-preview { height: 110px; }
   .footer .container { flex-direction: column; justify-content: center; padding: 28px 0; text-align: center; }
@@ -294,5 +320,5 @@ h2 em { color: var(--blue); font-family: "Playfair Display", serif; font-weight:
 /* Respeita usuários que desativam animações no dispositivo */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
 }

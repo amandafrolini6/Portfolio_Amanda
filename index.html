@@ -15,7 +15,7 @@
 
 <body>
   <!-- Cabeçalho e navegação -->
-  <header class="header" id="inicio">
+  <header class="header">
     <div class="container nav-container">
       <a class="logo" href="#inicio" aria-label="Voltar ao início">AF.</a>
 
@@ -24,8 +24,7 @@
       </button>
 
       <nav class="navigation" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a>
-        <a href="#habilidades">Habilidades</a>
+        <a href="#tecnologias">Tecnologias</a>
         <a href="#projetos">Projetos</a>
         <a href="#certificados">Certificados</a>
         <a class="nav-cta" href="#contato">Vamos conversar?</a>
@@ -35,7 +34,8 @@
 
   <main>
     <!-- Apresentação principal -->
-    <section class="hero section">
+    <!-- ALTERADO: o id da primeira seção é o destino do logo AF. e de "Voltar ao topo". -->
+    <section class="hero section" id="inicio">
       <div class="hero-shape" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-content reveal">
@@ -67,43 +67,36 @@
           <span class="code-label">&lt;/&gt; portfolio.js</span>
         </div>
       </div>
-      <a class="scroll-hint" href="#sobre">Role para descobrir ↓</a>
+      <a class="scroll-hint" href="#tecnologias">Role para descobrir ↓</a>
     </section>
 
-    <!-- Sobre e áreas de atuação -->
-    <section class="about section" id="sobre">
+    <!-- ALTERADO: seção dedicada às tecnologias; cada card é um elemento animável. -->
+    <section class="about section" id="tecnologias">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">01 — habilidades</p>
-          <h2>O que levo para cada<br><em>projeto.</em></h2>
-          <p>Uma combinação de código, olhar visual e atenção às pessoas.</p>
+          <p class="eyebrow">01 — tecnologias</p>
+          <h2>Tecnologias que <em>utilizo.</em></h2>
         </div>
 
-        <div class="skills-grid" id="habilidades">
-          <article class="skill-card reveal">
-            <span class="skill-icon">&lt;/&gt;</span>
-            <h3>Front-end</h3>
-            <p>Interfaces responsivas, acessíveis e agradáveis em qualquer dispositivo.</p>
-            <a href="#projetos">Conheça →</a>
-          </article>
-          <article class="skill-card reveal">
-            <span class="skill-icon">◇</span>
-            <h3>UX & UI</h3>
-            <p>Fluxos intuitivos e decisões visuais que tornam a experiência mais simples.</p>
-            <a href="#projetos">Conheça →</a>
-          </article>
-          <article class="skill-card reveal">
-            <span class="skill-icon">✦</span>
-            <h3>Design</h3>
-            <p>Identidades consistentes, protótipos e soluções com propósito.</p>
-            <a href="#projetos">Conheça →</a>
-          </article>
+        <div class="tech-stage reveal" aria-label="Tecnologias que utilizo">
+          <!-- Linhas decorativas atrás dos cards: não interferem na navegação. -->
+          <svg class="tech-trails" viewBox="0 0 1120 520" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M-30 125 C130 30 190 225 360 125 S620 30 760 125 S1010 210 1150 95" />
+            <path d="M-30 390 C130 475 215 280 360 390 S620 475 760 390 S1010 295 1150 415" />
+          </svg>
+          <div class="tech-grid">
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-html" aria-hidden="true">5</span><span>HTML</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-css" aria-hidden="true">3</span><span>CSS</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-js" aria-hidden="true">JS</span><span>JavaScript</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-figma" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>Figma</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-csharp" aria-hidden="true">C#</span><span>C#</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-python" aria-hidden="true">Py</span><span>Python</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-sql" aria-hidden="true">▤</span><span>SQL</span></div></div>
+            <div class="tech-card"><div class="tech-card-inner"><span class="tech-symbol tech-git" aria-hidden="true">◆</span><span>Git</span></div></div>
+          </div>
+          <span class="tech-center" aria-hidden="true">&lt;/&gt;</span>
         </div>
-
-        <div class="tech-list reveal" aria-label="Tecnologias">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
-          <span>C#</span><span>Python</span><span>SQL</span><span>Git</span>
-        </div>
+        <p class="tech-caption reveal">Sempre aprendendo, sempre criando.</p>
       </div>
     </section>
 
